@@ -21,6 +21,8 @@ class DeviseCreateAdmins < ActiveRecord::Migration
       t.string   :last_sign_in_ip
 
       t.timestamps null: false
+      t.integer :created_by, null: false
+      t.integer :updated_by, null: false
     end
 
     add_index :admins, :email,                unique: true

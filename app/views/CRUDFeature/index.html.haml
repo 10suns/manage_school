@@ -1,0 +1,17 @@
+%h1 Listing courses
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th
+      %th
+
+  %tbody
+    - @resources.each do |course|
+      %tr
+        %td= course.code
+        %td= link_to 'Show', course
+        %td= link_to 'Edit', '#'
+
+%br
